@@ -90,6 +90,13 @@ if err != nil {
 | `TraceID(id)` | Trace ID attr |
 | `Stringer(key, v)` | Attr from any fmt.Stringer |
 
+## Development
+
+```bash
+go test ./...
+go vet ./...
+```
+
 ## License
 
 MIT
