@@ -89,3 +89,31 @@ func TestTraceID(t *testing.T) {
 		t.Errorf("expected value 'abc-123-def', got %q", attr.Value.String())
 	}
 }
+
+func TestDatabase(t *testing.T) {
+	attr := Database("mydb", "localhost", 5432)
+	if attr.Key != "db" {
+		t.Errorf("expected key 'db', got %q", attr.Key)
+	}
+}
+
+func TestUserID(t *testing.T) {
+	attr := UserID("user-123")
+	if attr.Value.String() != "user-123" {
+		t.Errorf("unexpected value: %s", attr.Value.String())
+	}
+}
+
+func TestRequestID(t *testing.T) {
+	attr := RequestID("req-abc")
+	if attr.Value.String() != "req-abc" {
+		t.Errorf("unexpected value: %s", attr.Value.String())
+	}
+}
+
+func TestLatency(t *testing.T) {
+	attr := Latency(150 * time.Millisecond)
+	if attr.Key != "latency_ms" {
+		t.Errorf("expected key 'latency_ms', got %q", attr.Key)
+	}
+}

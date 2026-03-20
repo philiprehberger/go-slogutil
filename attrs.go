@@ -49,3 +49,27 @@ func TraceID(id string) slog.Attr {
 func Stringer(key string, v fmt.Stringer) slog.Attr {
 	return slog.String(key, v.String())
 }
+
+// Database returns an attribute group with database connection details.
+func Database(name, host string, port int) slog.Attr {
+	return slog.Group("db",
+		slog.String("name", name),
+		slog.String("host", host),
+		slog.Int("port", port),
+	)
+}
+
+// UserID returns an attribute with a user identifier.
+func UserID(id string) slog.Attr {
+	return slog.String("user_id", id)
+}
+
+// RequestID returns an attribute with a request identifier.
+func RequestID(id string) slog.Attr {
+	return slog.String("request_id", id)
+}
+
+// Latency returns an attribute with a latency duration in milliseconds.
+func Latency(d time.Duration) slog.Attr {
+	return slog.Float64("latency_ms", float64(d.Milliseconds()))
+}

@@ -74,6 +74,19 @@ if err != nil {
 }
 ```
 
+### Domain Attributes
+
+```go
+import slogutil "github.com/philiprehberger/go-slogutil"
+
+logger.Info("query complete",
+    slogutil.Database("users", "localhost", 5432),
+    slogutil.UserID("user-123"),
+    slogutil.RequestID("req-abc"),
+    slogutil.Latency(42 * time.Millisecond),
+)
+```
+
 ## API
 
 | Function / Type | Description |
@@ -89,6 +102,10 @@ if err != nil {
 | `HTTPStatus(code)` | Status code attr |
 | `TraceID(id)` | Trace ID attr |
 | `Stringer(key, v)` | Attr from any fmt.Stringer |
+| `Database(name, host, port)` | Group attr with database connection details |
+| `UserID(id)` | User identifier attr |
+| `RequestID(id)` | Request identifier attr |
+| `Latency(d)` | Latency in milliseconds attr |
 
 ## Development
 

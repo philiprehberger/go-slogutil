@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.0
+
+- Add `Database`, `UserID`, `RequestID`, `Latency` attribute helpers
+- Expand README with domain attribute examples
+
 ## 0.1.2
 
 - Add Development section to README
