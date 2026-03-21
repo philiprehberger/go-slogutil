@@ -1,8 +1,6 @@
 # go-slogutil
 
-[![CI](https://github.com/philiprehberger/go-slogutil/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/go-slogutil/actions/workflows/ci.yml)
-[![Go Reference](https://pkg.go.dev/badge/github.com/philiprehberger/go-slogutil.svg)](https://pkg.go.dev/github.com/philiprehberger/go-slogutil)
-[![License](https://img.shields.io/github/license/philiprehberger/go-slogutil)](LICENSE)
+[![CI](https://github.com/philiprehberger/go-slogutil/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/go-slogutil/actions/workflows/ci.yml) [![Go Reference](https://pkg.go.dev/badge/github.com/philiprehberger/go-slogutil.svg)](https://pkg.go.dev/github.com/philiprehberger/go-slogutil) [![License](https://img.shields.io/github/license/philiprehberger/go-slogutil)](LICENSE)
 
 Handlers, formatters, and helpers for Go's log/slog. The missing batteries
 
